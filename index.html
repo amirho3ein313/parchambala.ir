@@ -530,6 +530,187 @@
       font-size: 0.94rem;
     }
 
+    /* ========== INFO CARD - PREMIUM & BALANCED ========== */
+    .app-info-premium {
+      background: linear-gradient(135deg, rgba(12, 12, 20, 0.85), rgba(5, 5, 12, 0.92));
+      backdrop-filter: blur(20px);
+      border-radius: 28px;
+      border: 1px solid rgba(255, 123, 0, 0.2);
+      margin: 20px 0 70px;
+      padding: 0;
+      overflow: hidden;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.5);
+    }
+
+    .info-header-premium {
+      background: linear-gradient(90deg, rgba(255,123,0,0.08), rgba(255,123,0,0.02));
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,123,0,0.15);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .info-header-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .info-header-title i {
+      font-size: 1.2rem;
+      color: var(--accent);
+      background: rgba(255,123,0,0.12);
+      padding: 6px;
+      border-radius: 12px;
+    }
+
+    .info-header-title h4 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      background: linear-gradient(90deg, #fff, #ffbc6e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .info-badge-premium {
+      background: rgba(255,123,0,0.12);
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #ffbc6e;
+      border: 1px solid rgba(255,123,0,0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .info-items-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .info-grid-item {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 14px 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: 0.2s;
+      border-bottom: 1px solid rgba(255,255,255,0.02);
+    }
+
+    .info-grid-item:nth-child(odd) {
+      border-left: 1px solid rgba(255,255,255,0.02);
+    }
+
+    .info-grid-item:hover {
+      background: rgba(255,123,0,0.06);
+    }
+
+    .info-grid-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, rgba(255,123,0,0.12), rgba(255,123,0,0.04));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .info-grid-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .info-grid-label {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      color: #7f8ea3;
+      margin-bottom: 2px;
+    }
+
+    .info-grid-value {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1.3;
+      word-break: break-word;
+    }
+
+    .info-grid-sub {
+      font-size: 0.6rem;
+      color: #5a687c;
+      margin-top: 2px;
+    }
+
+    @media (min-width: 480px) {
+      .info-items-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .info-grid-item {
+        padding: 16px 14px;
+      }
+      .info-grid-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+      }
+      .info-grid-value {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .app-info-premium {
+        margin: 30px 0 80px;
+        border-radius: 32px;
+      }
+      .info-header-premium {
+        padding: 16px 28px;
+      }
+      .info-header-title i {
+        font-size: 1.3rem;
+        padding: 8px;
+        border-radius: 14px;
+      }
+      .info-header-title h4 {
+        font-size: 1.1rem;
+      }
+      .info-items-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .info-grid-item {
+        padding: 18px 16px;
+      }
+      .info-grid-value {
+        font-size: 1rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .info-items-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+      .info-grid-item {
+        border-bottom: none;
+      }
+      .info-grid-item:nth-child(odd) {
+        border-left: 1px solid rgba(255,255,255,0.02);
+      }
+    }
+
     /* Showcase */
     .showcase {
       background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)), #07080c;
@@ -888,6 +1069,19 @@
         min-width: 190px;
         width: 72vw;
       }
+
+      .info-grid-item {
+        padding: 10px 8px;
+        gap: 8px;
+      }
+      .info-grid-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+      }
+      .info-grid-value {
+        font-size: 0.75rem;
+      }
     }
 
     /* Reduce motion */
@@ -939,7 +1133,7 @@
             <i class="fab fa-google-play"></i>
             <span class="btn-text">
               <small>دریافت از</small>
-              <span>گوگل پلی</span>
+              <span>گوگل پلی (بزودی)</span>
             </span>
           </a>
 
@@ -959,6 +1153,71 @@
         </div>
       </div>
     </section>
+
+    <!-- ========== PREMIUM INFO SECTION - GRID STYLE ========== -->
+    <div class="app-info-premium">
+      <div class="info-header-premium">
+        <div class="info-header-title">
+          <i class="fas fa-mobile-alt"></i>
+          <h4>مشخصات فنی برنامه</h4>
+        </div>
+        <div class="info-badge-premium">
+          <i class="fas fa-check-circle"></i>
+          <span>نسخه ۲.۴.۱ پایدار</span>
+        </div>
+      </div>
+      <div class="info-items-grid">
+        <div class="info-grid-item">
+          <div class="info-grid-icon"><i class="fas fa-hdd"></i></div>
+          <div class="info-grid-text">
+            <div class="info-grid-label">حجم</div>
+            <div class="info-grid-value">۱۲ مگابایت</div>
+            <div class="info-grid-sub">حداقل فضا</div>
+          </div>
+        </div>
+        <div class="info-grid-item">
+          <div class="info-grid-icon"><i class="fab fa-android"></i></div>
+          <div class="info-grid-text">
+            <div class="info-grid-label">پسوند</div>
+            <div class="info-grid-value">.APK</div>
+            <div class="info-grid-sub">اندروید</div>
+          </div>
+        </div>
+        <div class="info-grid-item">
+          <div class="info-grid-icon"><i class="fas fa-calendar-alt"></i></div>
+          <div class="info-grid-text">
+            <div class="info-grid-label">بروزرسانی</div>
+            <div class="info-grid-value">۳ خرداد ۱۴۰۵</div>
+            <div class="info-grid-sub">آخرین نسخه</div>
+          </div>
+        </div>
+        <div class="info-grid-item">
+          <div class="info-grid-icon"><i class="fas fa-microchip"></i></div>
+          <div class="info-grid-text">
+            <div class="info-grid-label">حداقل نسخه</div>
+            <div class="info-grid-value">اندروید ۱۰+</div>
+            <div class="info-grid-sub">API 29</div>
+          </div>
+        </div>
+        <div class="info-grid-item">
+          <div class="info-grid-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="info-grid-text">
+            <div class="info-grid-label">امنیت</div>
+            <div class="info-grid-value">رمزنگاری AES-256</div>
+            <div class="info-grid-sub">پروتکل پیشرفته</div>
+          </div>
+        </div>
+        <div class="info-grid-item">
+          <div class="info-grid-icon"><i class="fas fa-language"></i></div>
+          <div class="info-grid-text">
+            <div class="info-grid-label">زبان</div>
+            <div class="info-grid-value">فارسی </div>
+            <div class="info-grid-sub">راست‌چین</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END OF PREMIUM INFO SECTION ========== -->
 
     <!-- Features -->
     <section class="section-title">
@@ -1036,29 +1295,56 @@
     </div>
   </div>
 
-  <footer>
-    <p>© ۱۴۰۵ - تمامی حقوق برای پلتفرم «پرچم بالا» محفوظ است.</p>
-  </footer>
 
   <script>
+
+// در قسمت اسکریپت، آرایه reviews را با این محتوا جایگزین کنید:
+
     const reviews = [
       {
         name: "امیرحسین مرادی",
         text: "واقعاً تجربه کاربری برنامه در سطح جهانیه. افتخار می‌کنم که عضوی از این پویش هستم.",
-        role: "داوطلب طلایی"
+        role: "داوطلب طلایی",
+        date: "۲ روز پیش"
       },
       {
         name: "سارا احمدی",
         text: "بخش نقشه زنده خیلی جذابه، حس اتحاد عجیبی به آدم میده وقتی پرچم‌ها رو میبینه.",
-        role: "فعال اجتماعی"
+        role: "فعال اجتماعی",
+        date: "۵ روز پیش"
       },
       {
         name: "محسن یگانه",
         text: "سرعت پاسخگویی و ارسال پرچم‌ها عالی بود. ممنون از تیم پرچم بالا.",
-        role: "کاربر ویژه"
+        role: "کاربر ویژه",
+        date: "۱ هفته پیش"
+      },
+      {
+        name: "نرگس کریمی",
+        text: "رابط کاربری خیلی روان و مدرنه. از اینکه پرچم کشورم رو توی نقشه میبینم حس غرور وصف‌ناپذیری دارم.",
+        role: "داوطلب فعال",
+        date: "۳ روز پیش"
+      },
+      {
+        name: "علی رضایی",
+        text: "بهترین اپلیکیشن برای اونایی که دغدغه ایران دارن. ثبت‌نام ساده و پشتیبانی عالی.",
+        role: "کاربر دائمی",
+        date: "۴ روز پیش"
+      },
+      {
+        name: "نیما صالحی",
+        text: "اولش شک داشتم اما بعد از نصب دیدم چقدر حرفه‌ای ساخته شده. به تمام دوستانم پیشنهاد دادم.",
+        role: "داوطلب ویژه",
+        date: "۲ هفته پیش"
+      },
+      {
+        name: "آرش مهرپویا",
+        text: "به عنوان یک برنامه‌نویس، کیفیت کدنویسی و تجربه کاربری این اپ واقعاً تحسین‌برانگیزه. با عشق ساخته شده",
+        role: "کابر ویژه",
+        date: "امروز",
+        isSpecial: true
       }
     ];
-
     let index = 0;
     let reviewTimer;
     const container = document.getElementById("comment-container");
